@@ -1,0 +1,32 @@
+.contactsList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.imgLink {
+  height: 32px;
+  width: 32px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.facebookImg {
+  background-image: url('contacts_img/facebook.png');
+}
+
+.instagramImg {
+  background-image: url('contacts_img/instagram.png');
+}
+
+.linkedinImg {
+  background-image: url('contacts_img/linkedin.png');
+}
+
+.githubImg {
+  background-image: url('contacts_img/github.png');
+}
