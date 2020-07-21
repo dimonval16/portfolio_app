@@ -27,7 +27,7 @@ const Contacts: FC = () => {
     ];
 
     return (
-        <section>
+        <section className={contactS.contactsWrapper}>
             <ul className={contactS.contactsList}>
                 {contactsData.map((item) => (
                     <li key={item.id}>

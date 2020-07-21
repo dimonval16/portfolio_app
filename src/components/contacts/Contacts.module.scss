@@ -1,11 +1,26 @@
+.contactsWrapper {
+  align-self: center;
+  margin-right: 20px;
+
+  @media screen and (max-width: 768px) {
+    align-self: stretch;
+    margin: 40px 0;
+  }
+}
+
 .contactsList {
   list-style-type: none;
   padding: 0;
-  margin: 0;
-  height: 300px;
+  margin: 20px 0;
+  height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: row;
+    height: 32px;
+  }
 }
 
 .imgLink {

@@ -13,7 +13,7 @@ const NavBar: FC = () => {
     ];
 
     return (
-        <nav>
+        <nav className={navS.navWrapper}>
             <ul className={navS.list}>
                 {navList.map((item) => (
                     <li key={item.id}>

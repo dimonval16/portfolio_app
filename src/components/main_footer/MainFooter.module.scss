@@ -1,0 +1,54 @@
+@import 'src/styles/basicStyle';
+
+$footer-bg-height: 312px;
+$footer-bg-width: 352px;
+
+.footerWrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-image: url('footer_bg.png');
+  width: $footer-bg-width;
+  height: $footer-bg-height;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+  transition-duration: .2s;
+  display: flex;
+  font: 100% $font-secondary;
+  font-weight: bold;
+
+  @media screen and (max-width: 1120px) {
+    width: $footer-bg-width/1.5;
+    height: $footer-bg-height/1.5;
+    transition-duration: .2s;
+  }
+
+  @media screen and (max-width: 768px){
+    width: $footer-bg-width/2;
+    height: $footer-bg-height/2;
+    position: static;
+  }
+}
+
+.reactText {
+  align-self: flex-end;
+  font-size: 3.2rem;
+  margin-bottom: 40px;
+
+  @media screen and (max-width: 425px) {
+    font-size: 2rem;
+  }
+}
+
+.jsText {
+  align-self: flex-end;
+  margin-left: 20px;
+  color: $active-color;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+
+  @media screen and (max-width: 425px) {
+    font-size: 1.5rem;
+  }
+}

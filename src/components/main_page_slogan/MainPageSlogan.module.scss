@@ -1,0 +1,46 @@
+@import 'src/styles/basicStyle';
+
+.sloganWrapper {
+  align-self: center;
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    height: 210px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 510px) {
+    flex-direction: column;
+    height: 210px;
+  }
+}
+
+.greeting {
+  font-weight: bold;
+  font-size: 4.5rem;
+
+  @media screen and (max-width: 1120px) {
+    font-size: 3.2rem;
+  }
+}
+
+.line {
+  background-color: $bg-color;
+  height: 12px;
+  width: 300px;
+}
+
+.profession {
+  font: 100% $font-secondary;
+  font-weight: bold;
+  font-size: 2rem;
+  color: $active-color;
+
+  @media screen and (max-width: 370px){
+    font-size: 1.7rem;
+  }
+}

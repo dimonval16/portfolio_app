@@ -1,6 +1,33 @@
+.mainPageWrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media screen and (max-width: 768px) {
+    justify-content: space-between;
+  }
+
+  @media screen and (max-width: 425px) {
+    height: min-content;
+    justify-content: space-between;
+  }
+}
+
 .mainPageContent {
   display: flex;
   justify-content: space-between;
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
+  transition-duration: .2s;
+
+  @media screen and (max-width: 1300px){
+    width: 90%;
+    transition-duration: .2s;
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 }

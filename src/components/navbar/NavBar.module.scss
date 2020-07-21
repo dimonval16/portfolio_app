@@ -1,5 +1,21 @@
 @import "src/styles/basicStyle";
 
+.navWrapper {
+  position: fixed;
+  top: 15px;
+  width: 100%;
+
+  @media screen and (max-width: 768px){
+    top: 0;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+    height: 100vh;
+    background-color: $bg-color;
+    box-shadow: -4px 0 12px rgba(0,0,0, 0.2);
+  }
+}
+
 .list {
   font-weight: bold;
   font-size: 1.3rem;
@@ -7,15 +23,14 @@
   justify-content: space-around;
   align-items: baseline;
   list-style-type: none;
-  margin-left: 20%;
+  margin: 0 0 0 20%;
   padding: 0;
   height: 30px;
-  @media screen and (max-width: 750px){
-    margin-left: 0;
-  }
-  @media screen and (max-width: 450px){
+
+  @media screen and (max-width: 768px){
+    margin: 0;
     flex-direction: column;
-    margin-left: 30%;
+    height: 350px;
   }
 }
 
@@ -28,6 +43,10 @@
     font-size: 1.4rem;
     color: $active-color;
     transition-duration: .1s;
+  }
+
+  @media screen and (max-width: 768px){
+    color: white;
   }
 }
 
@@ -44,6 +63,10 @@
   cursor: pointer;
   font-size: 1rem;
   margin-left: 10px;
+
+  @media screen and (max-width: 768px){
+    color: white;
+  }
 }
 
 .listItemLangActive {
