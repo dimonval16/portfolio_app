@@ -1,0 +1,25 @@
+@import 'src/styles/basicStyle';
+
+.styledBurger {
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 1;
+  display: none;
+
+  @media screen and (max-width: 768px){
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+  }
+
+  div {
+    width: 2rem;
+    height: 0.25rem;
+    background-color: $primary-color;
+    border-radius: 10px;
+  }
+}
