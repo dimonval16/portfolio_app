@@ -1,0 +1,89 @@
+@import 'src/styles/basicStyle';
+
+$cv-button-height: 6rem;
+$cv-button-width: 6rem;
+$cv-font-size: 1.6rem;
+
+.linkWrapper {
+  @media screen and (max-width: 768px){
+    text-decoration: none;
+    align-self: center;
+    width: 80%;
+    margin-bottom: 60px;
+  }
+}
+
+.cvButtonWrapper {
+  width: $cv-button-width;
+  height: $cv-button-height;
+  border-radius: 50%;
+  background-color: $active-color;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  bottom: 30px;
+  right: 5%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: $cv-font-size;
+  transition: all .2s linear;
+  cursor: pointer;
+
+  span {
+    &:nth-child(2) {
+      margin-left: 5px;
+      transition: all .2s linear;
+      position: relative;
+      left: 0;
+    }
+  }
+
+  &:active {
+    background-color: rgba(33, 53, 190, 0.3);
+    transition: background-color .2s ease-in-out;
+    box-shadow: 0 0 40px rgba(33, 53, 190, 0.3);
+  }
+
+  &:hover {
+    width: $cv-button-width*2.5;
+    border-radius: 50px;
+
+    span {
+      &:nth-child(2) {
+        transform: rotate(90deg);
+        left: 10px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1120px) {
+    width: $cv-button-width/1.5;
+    height: $cv-button-height/1.5;
+    font-size: 1.2rem;
+
+    &:hover {
+      width: $cv-button-width*1.5;
+    }
+  }
+
+  @media screen and (max-width: 768px){
+    position: static;
+    width: 100%;
+    border-radius: 50px;
+    z-index: 0;
+
+    &:after {
+      content: 'Download CV';
+    }
+
+    &:hover {
+      width: 100%;
+    }
+
+    span {
+      display: none;
+    }
+  }
+}

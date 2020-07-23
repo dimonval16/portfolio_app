@@ -4,6 +4,15 @@ $footer-bg-height: 312px;
 $footer-bg-width: 352px;
 
 .footerWrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width: 768px){
+    flex-direction: column-reverse;
+  }
+}
+
+.footerImgWrapper {
   position: absolute;
   bottom: 0;
   left: 0;
