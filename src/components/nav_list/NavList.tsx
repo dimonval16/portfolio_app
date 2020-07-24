@@ -1,8 +1,9 @@
 import React, { FC } from 'react';
-import navS from './NavList.module.scss';
 import { NavLink } from 'react-router-dom';
-import { NavListArrI, NavListPropsI, StyledNavI } from '../../interfaces/navBarInterface';
 import styled from 'styled-components';
+import navS from './NavList.module.scss';
+import { NavListArrI, NavListPropsI, StyledNavI } from '../../interfaces/navBarInterface';
+import SelectLang from '../select_lang/SelectLang';
 
 const StyledNav = styled.nav<StyledNavI>`
     @media (max-width: 768px) {
@@ -35,10 +36,7 @@ const NavList: FC<NavListPropsI> = ({ open }: NavListPropsI) => {
                         </NavLink>
                     </li>
                 ))}
-                <div className={navS.itemLangContainer}>
-                    <li className={navS.listItemLang}>ru</li>
-                    <li className={`${navS.listItemLang} ${navS.listItemLangActive}`}>eng</li>
-                </div>
+                <SelectLang />
             </ul>
         </StyledNav>
     );

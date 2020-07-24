@@ -55,21 +55,3 @@
   font-size: 1.4rem;
   color: $active-color;
 }
-
-.itemLangContainer {
-  display: flex;
-}
-
-.listItemLang {
-  cursor: pointer;
-  font-size: 1rem;
-  margin-left: 10px;
-
-  @media screen and (max-width: 768px){
-    color: white;
-  }
-}
-
-.listItemLangActive {
-  color: $active-color;
-}
