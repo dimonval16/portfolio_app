@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import burgerS from './BurgerButton.module.scss';
-import { StyledBurgerI, BurgerButtonPropsI } from '../../interfaces/burgerMenuInterface';
+import { StyledBurgerI, BurgerButtonPropsI } from '../../interfaces/burgerMenuInterfaces';
 
 const StyledBurger = styled.div<StyledBurgerI>`
     div {

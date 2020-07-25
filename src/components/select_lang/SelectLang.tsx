@@ -2,6 +2,7 @@ import React, { FC, useState, ChangeEvent } from 'react';
 import selectLangS from './SelectLang.module.scss';
 import { withStyles } from '@material-ui/core/styles';
 import Switch from '@material-ui/core/Switch';
+import { SelectLangPropsI } from '../../interfaces/navBarInterface';
 
 const CustomSwitch = withStyles({
     switchBase: {
@@ -25,7 +26,7 @@ const CustomSwitch = withStyles({
     track: {},
 })(Switch);
 
-const SelectLang: FC = () => {
+const SelectLang: FC<SelectLangPropsI> = ({ langList }: SelectLangPropsI) => {
     const [value, setValue] = useState(true);
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -34,9 +35,9 @@ const SelectLang: FC = () => {
 
     return (
         <div>
-            <span className={selectLangS.langLabel}>Rus</span>
+            <span className={selectLangS.langLabel}>{langList.rus}</span>
             <CustomSwitch checked={value} onChange={handleChange} />
-            <span className={selectLangS.langLabel}>Eng</span>
+            <span className={selectLangS.langLabel}>{langList.eng}</span>
             <br />
             <span>{value ? 'hui' : 'хуй'}</span>
         </div>

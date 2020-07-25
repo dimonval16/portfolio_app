@@ -2,6 +2,8 @@ import { createStore } from 'redux';
 import { rootReducer } from './reducers';
 import { initialState } from './state/state';
 
-const store = createStore(rootReducer, initialState);
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+export const store = createStore(rootReducer, initialState);
 
-export default store;
+export type AppDispatch = typeof store.dispatch;

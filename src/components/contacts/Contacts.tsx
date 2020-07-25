@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import contactS from './Contacts.module.scss';
-import { ContactsDataI } from '../../interfaces/contactsInterface';
+import { ContactsDataI } from '../../interfaces/contactsInterfaces';
 
 const Contacts: FC = () => {
     const contactsData: ContactsDataI[] = [
