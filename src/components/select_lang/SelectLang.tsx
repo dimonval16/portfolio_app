@@ -26,11 +26,12 @@ const CustomSwitch = withStyles({
     track: {},
 })(Switch);
 
-const SelectLang: FC<SelectLangPropsI> = ({ langList }: SelectLangPropsI) => {
+const SelectLang: FC<SelectLangPropsI> = ({ langList, onToggleLanguage }: SelectLangPropsI) => {
     const [value, setValue] = useState(true);
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
         setValue(event.target.checked);
+        onToggleLanguage(event.target.checked);
     };
 
     return (
@@ -38,8 +39,6 @@ const SelectLang: FC<SelectLangPropsI> = ({ langList }: SelectLangPropsI) => {
             <span className={selectLangS.langLabel}>{langList.rus}</span>
             <CustomSwitch checked={value} onChange={handleChange} />
             <span className={selectLangS.langLabel}>{langList.eng}</span>
-            <br />
-            <span>{value ? 'hui' : 'хуй'}</span>
         </div>
     );
 };

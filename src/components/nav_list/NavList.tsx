@@ -12,7 +12,7 @@ const StyledNav = styled.nav<StyledNavI>`
     }
 `;
 
-const NavList: FC<NavListPropsI> = ({ open, navBarData }: NavListPropsI) => {
+const NavList: FC<NavListPropsI> = ({ open, navBarData, onToggleLanguage }: NavListPropsI) => {
     const navList = navBarData.navListArr;
     const langList = navBarData.langList;
 
@@ -25,13 +25,13 @@ const NavList: FC<NavListPropsI> = ({ open, navBarData }: NavListPropsI) => {
                             exact
                             className={navS.listItem}
                             activeClassName={navS.listItemActive}
-                            to={item.name === 'home' ? '/' : item.name}
+                            to={item.link === 'home' ? '/' : item.link}
                         >
                             {item.name}
                         </NavLink>
                     </li>
                 ))}
-                <SelectLang langList={langList} />
+                <SelectLang langList={langList} onToggleLanguage={onToggleLanguage} />
             </ul>
         </StyledNav>
     );

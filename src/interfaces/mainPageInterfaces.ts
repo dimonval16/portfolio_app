@@ -32,3 +32,7 @@ export interface ButtonCVPropsI {
     desktopCV: string;
     mobileCV: string;
 }
+
+export interface StyledButtonPropsI {
+    mobileCV: string;
+}

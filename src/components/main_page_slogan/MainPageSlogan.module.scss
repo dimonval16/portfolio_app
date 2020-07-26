@@ -26,6 +26,14 @@
   @media screen and (max-width: 1120px) {
     font-size: 3.2rem;
   }
+
+  @media screen and (max-width: 768px) {
+    font-size: 3rem;
+  }
+
+  @media screen and (max-width: 400px){
+    font-size: 2.7rem;
+  }
 }
 
 .line {
@@ -40,7 +48,12 @@
   font-size: 2rem;
   color: $active-color;
 
-  @media screen and (max-width: 370px){
-    font-size: 1.7rem;
+  @media screen and (max-width: 768px) {
+    font-size: 1.8rem;
+  }
+
+  @media screen and (max-width: 400px){
+    font-size: 1.6rem;
+    text-align: center;
   }
 }

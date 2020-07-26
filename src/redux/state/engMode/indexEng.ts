@@ -3,11 +3,11 @@ import { mainPageEng } from './mainEng';
 export const engMode = {
     navBar: {
         navListArr: [
-            { name: 'home', id: 1 },
-            { name: 'about', id: 2 },
-            { name: 'skills', id: 3 },
-            { name: 'experience', id: 4 },
-            { name: 'portfolio', id: 5 },
+            { name: 'home', link: 'home', id: 1 },
+            { name: 'about', link: 'about', id: 2 },
+            { name: 'skills', link: 'skills', id: 3 },
+            { name: 'experience', link: 'experience', id: 4 },
+            { name: 'portfolio', link: 'portfolio', id: 5 },
         ],
         langList: {
             rus: 'Rus',

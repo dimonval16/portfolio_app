@@ -1,6 +1,7 @@
 interface NavListArrI {
     name: string;
     id: string | number;
+    link: string;
 }
 
 interface LangListI {
@@ -8,7 +9,7 @@ interface LangListI {
     eng: string;
 }
 
-interface NavBarDataI {
+export interface NavBarDataI {
     navListArr: NavListArrI[];
     langList: LangListI;
 }
@@ -19,13 +20,16 @@ export interface StyledNavI {
 
 export interface NavBarPropsI {
     navBarData: NavBarDataI;
+    toggleLanguage: (toggleEvent: boolean) => void;
 }
 
 export interface NavListPropsI {
     open: boolean;
     navBarData: NavBarDataI;
+    onToggleLanguage: (toggleEvent: boolean) => void;
 }
 
 export interface SelectLangPropsI {
     langList: LangListI;
+    onToggleLanguage: (toggleEvent: boolean) => void;
 }
