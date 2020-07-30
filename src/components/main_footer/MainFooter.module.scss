@@ -6,6 +6,7 @@ $footer-bg-width: 352px;
 .footerWrapper {
   display: flex;
   justify-content: space-between;
+  z-index: 1;
 
   @media screen and (max-width: 768px){
     flex-direction: column-reverse;

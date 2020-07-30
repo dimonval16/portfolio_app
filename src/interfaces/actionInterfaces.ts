@@ -4,3 +4,7 @@ export interface ToggleLanguageActionI {
 }
 
 export type ToggleLangACType = (toggleEvent: boolean) => ToggleLanguageActionI;
+
+export interface ThemeActionI {
+    type: string;
+}

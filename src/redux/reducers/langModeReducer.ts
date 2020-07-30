@@ -10,7 +10,7 @@ export const langModeReducer = (state = langInitialState, action: ToggleLanguage
         case TO_TOGGLE_LANGUAGE: {
             return {
                 ...state,
-                currentMode: action.toggleEvent ? state.engInfoMode : state.rusInfoMode,
+                currentLang: action.toggleEvent ? state.engLang : state.rusLang,
             };
         }
 

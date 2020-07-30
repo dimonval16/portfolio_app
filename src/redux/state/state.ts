@@ -1,11 +1,18 @@
 import { engMode } from './engMode/indexEng';
 import { rusMode } from './rusMode/indexRus';
+import { lightThemeMode } from './themeMode/lightTheme';
+import { darkThemeMode } from './themeMode/darkTheme';
 
 export const initialState = {
     langMode: {
-        engInfoMode: engMode,
-        rusInfoMode: rusMode,
-        currentMode: engMode,
+        engLang: engMode,
+        rusLang: rusMode,
+        currentLang: engMode,
+    },
+    themeMode: {
+        lightTheme: lightThemeMode,
+        darkTheme: darkThemeMode,
+        currentTheme: lightThemeMode,
     },
 };
 

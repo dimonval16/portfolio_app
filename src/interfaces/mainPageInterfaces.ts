@@ -1,3 +1,5 @@
+import { ThemeModeI } from './navBarInterface';
+
 interface SloganI {
     greeting: string;
     lastName: string;
@@ -18,6 +20,7 @@ interface MainPageDataI {
 
 export interface MainPagePropsI {
     mainPageData: MainPageDataI;
+    themeMode: ThemeModeI;
 }
 
 export interface SloganPropsI {
@@ -35,4 +38,13 @@ export interface ButtonCVPropsI {
 
 export interface StyledButtonPropsI {
     mobileCV: string;
+}
+
+export interface StyledMainPageI {
+    bgcolor: string;
+}
+
+export interface MainMapStateI {
+    mainPageData: MainPageDataI;
+    themeMode: ThemeModeI;
 }

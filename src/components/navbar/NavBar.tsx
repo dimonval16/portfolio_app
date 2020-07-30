@@ -4,31 +4,24 @@ import { Dispatch } from 'redux';
 import { InitialStateType } from '../../redux/state/state';
 import NavList from '../nav_list/NavList';
 import BurgerButton from '../burger_button/BurgerButton';
-import { NavBarPropsI, NavBarDataI } from '../../interfaces/navBarInterface';
+import { NavBarPropsI, MapStatePropsI, MapDispatchPropsI } from '../../interfaces/navBarInterface';
 import { toggleLanguageAC } from '../../redux/actions/langModeActions';
 
-const NavBar: FC<NavBarPropsI> = ({ navBarData, toggleLanguage }: NavBarPropsI) => {
+const NavBar: FC<NavBarPropsI> = ({ navBarData, themeMode, toggleLanguage }: NavBarPropsI) => {
     const [open, setOpen] = useState(false);
 
     return (
         <>
-            <NavList open={open} navBarData={navBarData} onToggleLanguage={toggleLanguage} />
+            <NavList open={open} navBarData={navBarData} onToggleLanguage={toggleLanguage} themeMode={themeMode} />
             <BurgerButton onSetOpen={() => setOpen(!open)} open={open} />
         </>
     );
 };
 
-interface MapStatePropsI {
-    navBarData: NavBarDataI;
-}
-
-interface MapDispatchPropsI {
-    toggleLanguage: (toggleEvent: boolean) => void;
-}
-
 const mapState = (state: InitialStateType): MapStatePropsI => {
     return {
-        navBarData: state.langMode.currentMode.navBar,
+        navBarData: state.langMode.currentLang.navBar,
+        themeMode: state.themeMode.currentTheme,
     };
 };
 

@@ -11,7 +11,6 @@
     width: 200px;
     padding: 20px;
     height: 100vh;
-    background-color: $bg-color;
     box-shadow: -4px 0 12px rgba(0,0,0, 0.2);
     z-index: 2;
   }
@@ -38,20 +37,9 @@
 .listItem {
   text-decoration: none;
   transition-duration: .1s;
-  color: $primary-color;
 
   &:hover {
     font-size: 1.4rem;
-    color: $active-color;
     transition-duration: .1s;
   }
-
-  @media screen and (max-width: 768px){
-    color: white;
-  }
-}
-
-.listItemActive {
-  font-size: 1.4rem;
-  color: $active-color;
 }

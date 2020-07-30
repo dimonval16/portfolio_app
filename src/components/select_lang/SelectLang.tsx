@@ -1,5 +1,5 @@
 import React, { FC, useState, ChangeEvent } from 'react';
-import selectLangS from './SelectLang.module.scss';
+import styled from 'styled-components';
 import { withStyles } from '@material-ui/core/styles';
 import Switch from '@material-ui/core/Switch';
 import { SelectLangPropsI } from '../../interfaces/navBarInterface';
@@ -26,7 +26,16 @@ const CustomSwitch = withStyles({
     track: {},
 })(Switch);
 
-const SelectLang: FC<SelectLangPropsI> = ({ langList, onToggleLanguage }: SelectLangPropsI) => {
+const StyledLabel = styled.span`
+    font-size: 1rem;
+    color: ${({ color }) => color};
+
+    @media (max-width: 768px) {
+        color: white;
+    }
+`;
+
+const SelectLang: FC<SelectLangPropsI> = ({ langList, onToggleLanguage, themeMode }: SelectLangPropsI) => {
     const [value, setValue] = useState(true);
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -36,9 +45,9 @@ const SelectLang: FC<SelectLangPropsI> = ({ langList, onToggleLanguage }: Select
 
     return (
         <div>
-            <span className={selectLangS.langLabel}>{langList.rus}</span>
+            <StyledLabel color={themeMode.primaryTextColor}>{langList.rus}</StyledLabel>
             <CustomSwitch checked={value} onChange={handleChange} />
-            <span className={selectLangS.langLabel}>{langList.eng}</span>
+            <StyledLabel color={themeMode.primaryTextColor}>{langList.eng}</StyledLabel>
         </div>
     );
 };
