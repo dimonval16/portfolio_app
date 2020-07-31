@@ -37,7 +37,6 @@
 }
 
 .line {
-  background-color: $bg-color;
   height: 12px;
   width: 300px;
 }
@@ -46,7 +45,6 @@
   font: 100% $font-secondary;
   font-weight: bold;
   font-size: 2rem;
-  color: $active-color;
 
   @media screen and (max-width: 768px) {
     font-size: 1.8rem;

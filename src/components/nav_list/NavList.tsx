@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import navS from './NavList.module.scss';
-import SelectLang from '../select_lang/SelectLang';
+import SelectPanel from '../select_panel/SelectPanel';
 import { NavListPropsI, StyledNavI, StyledNavLinkI } from '../../interfaces/navBarInterface';
 
 const StyledNav = styled.nav<StyledNavI>`
@@ -25,9 +25,15 @@ const StyledNavLink = styled(NavLink)<StyledNavLinkI>`
     }
 `;
 
-const NavList: FC<NavListPropsI> = ({ open, navBarData, onToggleLanguage, themeMode }: NavListPropsI) => {
+const NavList: FC<NavListPropsI> = ({
+    open,
+    navBarData,
+    onToggleLanguage,
+    onToggleTheme,
+    themeMode,
+}: NavListPropsI) => {
     const navList = navBarData.navListArr;
-    const langList = navBarData.langList;
+    const selectPanel = navBarData.selectPanel;
 
     return (
         <StyledNav className={navS.navWrapper} open={open} primaryBlockColor={themeMode.primaryBlockColor}>
@@ -46,7 +52,18 @@ const NavList: FC<NavListPropsI> = ({ open, navBarData, onToggleLanguage, themeM
                         </StyledNavLink>
                     </li>
                 ))}
-                <SelectLang langList={langList} onToggleLanguage={onToggleLanguage} themeMode={themeMode} />
+                <SelectPanel
+                    labelLeft={selectPanel.rus}
+                    labelRight={selectPanel.eng}
+                    onTogglePanel={onToggleLanguage}
+                    themeMode={themeMode}
+                />
+                <SelectPanel
+                    labelLeft={selectPanel.dark}
+                    labelRight={selectPanel.light}
+                    onTogglePanel={onToggleTheme}
+                    themeMode={themeMode}
+                />
             </ul>
         </StyledNav>
     );

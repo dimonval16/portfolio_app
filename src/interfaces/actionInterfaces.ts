@@ -1,10 +1,6 @@
-export interface ToggleLanguageActionI {
+export interface ToggleModeActionI {
     type: string;
     toggleEvent: boolean;
 }
 
-export type ToggleLangACType = (toggleEvent: boolean) => ToggleLanguageActionI;
-
-export interface ThemeActionI {
-    type: string;
-}
+export type ToggleModeACType = (toggleEvent: boolean) => ToggleModeActionI;

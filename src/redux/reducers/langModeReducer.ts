@@ -1,11 +1,12 @@
 import { initialState } from '../state/state';
-import { ToggleLanguageActionI } from '../../interfaces/actionInterfaces';
+import { ToggleModeActionI } from '../../interfaces/actionInterfaces';
 import { TO_TOGGLE_LANGUAGE } from '../actions/langModeActions';
 
 const langInitialState = initialState.langMode;
-type LangStateType = typeof langInitialState;
+type LangInitialStateType = typeof langInitialState;
+type LangModeReducerType = (state: LangInitialStateType, action: ToggleModeActionI) => LangInitialStateType;
 
-export const langModeReducer = (state = langInitialState, action: ToggleLanguageActionI): LangStateType => {
+export const langModeReducer: LangModeReducerType = (state = langInitialState, action) => {
     switch (action.type) {
         case TO_TOGGLE_LANGUAGE: {
             return {

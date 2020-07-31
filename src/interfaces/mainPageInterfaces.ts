@@ -1,4 +1,4 @@
-import { ThemeModeI } from './navBarInterface';
+import { ThemeModeI } from './themeModeInterfaces';
 
 interface SloganI {
     greeting: string;
@@ -25,23 +25,39 @@ export interface MainPagePropsI {
 
 export interface SloganPropsI {
     sloganData: SloganI;
+    themeMode: ThemeModeI;
+}
+
+export interface PhotoBlockPropsI {
+    themeMode: string;
 }
 
 export interface FooterPropsI {
     footerData: FooterI;
+    themeMode: ThemeModeI;
 }
 
 export interface ButtonCVPropsI {
     desktopCV: string;
     mobileCV: string;
+    themeMode: ThemeModeI;
 }
 
 export interface StyledButtonPropsI {
     mobileCV: string;
+    bgColor: string;
 }
 
 export interface StyledMainPageI {
-    bgcolor: string;
+    bgColor: string;
+}
+
+export interface StyledSloganUnderlineI {
+    bgColor: string;
+}
+
+export interface StyledImageI {
+    colorsType: string;
 }
 
 export interface MainMapStateI {

@@ -2,17 +2,15 @@ $imageHeight: 618px;
 $imageWidth: 570px;
 
 .image {
-  background-image: url('photo_block_cut.png');
   background-size: contain;
   background-repeat: no-repeat;
   width: $imageWidth;
   height: $imageHeight;
-  transition-duration: .2s;
+  transition: all .2s ease-in-out;
 
   @media screen and (max-width: 1120px) {
     width: $imageWidth/1.5;
     height: $imageHeight/1.5;
-    transition-duration: .2s;
   }
 
   @media screen and (max-width: 768px) {

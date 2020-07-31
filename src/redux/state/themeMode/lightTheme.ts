@@ -5,4 +5,5 @@ export const lightThemeMode = {
     backgroundColor: '#fff',
     primaryBlockColor: '#A9B1EA',
     secondaryBlockColor: '#F8E1C6',
+    colorsType: 'light',
 };

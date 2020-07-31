@@ -5,7 +5,7 @@ import { StyledBurgerI, BurgerButtonPropsI } from '../../interfaces/burgerMenuIn
 
 const StyledBurger = styled.div<StyledBurgerI>`
     div {
-        background-color: ${({ open }) => (open ? '#fff' : '#333')};
+        background-color: ${({ open, themeColor }) => (open ? '#fff' : themeColor)};
         transform-origin: 1px;
         transition: all 0.2s linear;
 
@@ -24,9 +24,9 @@ const StyledBurger = styled.div<StyledBurgerI>`
     }
 `;
 
-const BurgerButton: FC<BurgerButtonPropsI> = ({ onSetOpen, open }: BurgerButtonPropsI) => {
+const BurgerButton: FC<BurgerButtonPropsI> = ({ onSetOpen, open, themeColor }: BurgerButtonPropsI) => {
     return (
-        <StyledBurger className={burgerS.styledBurger} open={open} onClick={onSetOpen}>
+        <StyledBurger className={burgerS.styledBurger} open={open} onClick={onSetOpen} themeColor={themeColor}>
             <div />
             <div />
             <div />

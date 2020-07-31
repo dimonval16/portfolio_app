@@ -1,11 +1,5 @@
-export interface ThemeModeI {
-    primaryTextColor: string;
-    professionTextColor: string;
-    actionColor: string;
-    backgroundColor: string;
-    primaryBlockColor: string;
-    secondaryBlockColor: string;
-}
+import { ThemeModeI } from './themeModeInterfaces';
+import { ChangeEvent } from 'react';
 
 interface NavListArrI {
     name: string;
@@ -13,14 +7,16 @@ interface NavListArrI {
     link: string;
 }
 
-interface LangListI {
+interface SelectPanelI {
     rus: string;
     eng: string;
+    light: string;
+    dark: string;
 }
 
 export interface NavBarDataI {
     navListArr: NavListArrI[];
-    langList: LangListI;
+    selectPanel: SelectPanelI;
 }
 
 export interface StyledNavI {
@@ -36,6 +32,7 @@ export interface StyledNavLinkI {
 export interface NavBarPropsI {
     navBarData: NavBarDataI;
     toggleLanguage: (toggleEvent: boolean) => void;
+    toggleTheme: (toggleEvent: boolean) => void;
     themeMode: ThemeModeI;
 }
 
@@ -43,13 +40,21 @@ export interface NavListPropsI {
     open: boolean;
     navBarData: NavBarDataI;
     onToggleLanguage: (toggleEvent: boolean) => void;
+    onToggleTheme: (toggleEvent: boolean) => void;
     themeMode: ThemeModeI;
 }
 
-export interface SelectLangPropsI {
-    langList: LangListI;
-    onToggleLanguage: (toggleEvent: boolean) => void;
+export interface SelectPanelPropsI {
+    labelLeft: string;
+    labelRight: string;
+    onTogglePanel: (toggleEvent: boolean) => void;
     themeMode: ThemeModeI;
+}
+
+export interface SwitchComponentPropsI {
+    themeMode: ThemeModeI;
+    switchValue: boolean;
+    handleSwitchChange: (toggleEvent: ChangeEvent<HTMLInputElement>) => void;
 }
 
 export interface MapStatePropsI {
@@ -59,4 +64,5 @@ export interface MapStatePropsI {
 
 export interface MapDispatchPropsI {
     toggleLanguage: (toggleEvent: boolean) => void;
+    toggleTheme: (toggleEvent: boolean) => void;
 }

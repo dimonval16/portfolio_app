@@ -9,9 +9,11 @@ export const rusMode = {
             { name: 'опыт', link: 'experience', id: 4 },
             { name: 'портфолио', link: 'portfolio', id: 5 },
         ],
-        langList: {
+        selectPanel: {
             rus: 'Рус',
             eng: 'Англ',
+            light: 'Светлое',
+            dark: 'Темное',
         },
     },
     mainPage: mainPageRus,

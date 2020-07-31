@@ -17,7 +17,6 @@ $cv-font-size: 1.6rem;
   width: $cv-button-width;
   height: $cv-button-height;
   border-radius: 50%;
-  background-color: $active-color;
   color: white;
   font-weight: bold;
   position: absolute;
@@ -41,8 +40,8 @@ $cv-font-size: 1.6rem;
   }
 
   &:active {
-    background-color: rgba(33, 53, 190, 0.3);
-    transition: background-color .2s ease-in-out;
+    opacity: 0.3;
+    transition: opacity .2s ease-in-out;
     box-shadow: 0 0 40px rgba(33, 53, 190, 0.3);
   }
 

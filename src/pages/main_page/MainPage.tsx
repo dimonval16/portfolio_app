@@ -11,18 +11,19 @@ import MainFooter from '../../components/main_footer/MainFooter';
 import { MainPagePropsI, MainMapStateI, StyledMainPageI } from '../../interfaces/mainPageInterfaces';
 
 const StyledWrapper = styled.div<StyledMainPageI>`
-    background-color: ${({ bgcolor }) => bgcolor};
+    background-color: ${({ bgColor }) => bgColor};
+    transition: all 0.1s ease-in-out;
 `;
 
 const MainPage: FC<MainPagePropsI> = ({ mainPageData, themeMode }: MainPagePropsI) => {
     return (
-        <StyledWrapper className={mainS.mainPageWrapper} bgcolor={themeMode.backgroundColor}>
+        <StyledWrapper className={mainS.mainPageWrapper} bgColor={themeMode.backgroundColor}>
             <div className={mainS.mainPageContent}>
-                <Contacts />
-                <MainPageSlogan sloganData={mainPageData.slogan} />
-                <PhotoBlock />
+                <Contacts themeMode={themeMode} />
+                <MainPageSlogan sloganData={mainPageData.slogan} themeMode={themeMode} />
+                <PhotoBlock themeMode={themeMode.colorsType} />
             </div>
-            <MainFooter footerData={mainPageData.footer} />
+            <MainFooter footerData={mainPageData.footer} themeMode={themeMode} />
         </StyledWrapper>
     );
 };

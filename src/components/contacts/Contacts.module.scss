@@ -30,18 +30,30 @@
   background-size: contain;
 }
 
-.facebookImg {
-  background-image: url('contacts_img/facebook.png');
+.facebookImgLight {
+  background-image: url('contacts_img/facebook_light_theme.png');
+}
+.facebookImgDark {
+  background-image: url('contacts_img/facebook_dark_theme.png');
 }
 
-.instagramImg {
-  background-image: url('contacts_img/instagram.png');
+.instagramImgLight {
+  background-image: url('contacts_img/instagram_light_theme.png');
+}
+.instagramImgDark {
+  background-image: url('contacts_img/instagram_dark_theme.png');
 }
 
-.linkedinImg {
-  background-image: url('contacts_img/linkedin.png');
+.linkedinImgLight {
+  background-image: url('contacts_img/linkedin_light_theme.png');
+}
+.linkedinImgDark {
+  background-image: url('contacts_img/linkedin_dark_theme.png');
 }
 
-.githubImg {
-  background-image: url('contacts_img/github.png');
+.githubImgLight {
+  background-image: url('contacts_img/github_light_theme.png');
+}
+.githubImgDark {
+  background-image: url('contacts_img/github_dark_theme.png');
 }
