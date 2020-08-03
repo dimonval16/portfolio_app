@@ -40,8 +40,7 @@ $cv-font-size: 1.6rem;
   }
 
   &:active {
-    opacity: 0.3;
-    transition: opacity .2s ease-in-out;
+    filter: contrast(1.2) brightness(1.1);
     box-shadow: 0 0 40px rgba(33, 53, 190, 0.3);
   }
 
